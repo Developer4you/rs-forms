@@ -17,6 +17,15 @@
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui"
   },
+    "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{css,scss,json,md}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
     "react": "^19.1.0",

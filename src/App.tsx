@@ -7,6 +7,7 @@ import './App.css';
 
 function App() {
   const { formData, modals, openModal, closeModal } = useStore();
+
   const [newItems, setNewItems] = useState<Set<string>>(new Set());
 
   useEffect(() => {
