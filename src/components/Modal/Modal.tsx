@@ -43,7 +43,7 @@ export default function Modal({
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="modal-overlay">
+    <div className="modal-overlay" data-testid="modal-overlay">
       <div
         ref={modalRef}
         className="modal-content"

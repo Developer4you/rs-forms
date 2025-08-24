@@ -76,6 +76,11 @@ export default function UncontrolledForm() {
         if (!value) newErrors.country = 'Country is required';
         else delete newErrors.country;
         break;
+      case 'image':
+        if (value && typeof value === 'string') {
+          delete newErrors.image;
+        }
+        break;
     }
 
     setErrors(newErrors);
@@ -275,8 +280,8 @@ export default function UncontrolledForm() {
       </div>
 
       <div className="form-field">
-        <label>
-          <input type="checkbox" name="acceptTerms" />
+        <label htmlFor="acceptTerms">
+          <input id="acceptTerms" type="checkbox" name="acceptTerms" />
           Accept Terms and Conditions
         </label>
         {errors.acceptTerms && (

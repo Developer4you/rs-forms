@@ -17,10 +17,6 @@ function App() {
     return () => clearTimeout(timer);
   }, [formData]);
 
-  // const handleNewItem = (item: FormData) => {
-  //   setNewItems((prev) => new Set(prev).add(item.id));
-  // };
-
   return (
     <div className="app">
       <h1>React Forms</h1>
